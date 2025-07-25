@@ -1,0 +1,71 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    height: 100vh;
+    display: flex;
+    background: #008B8B;
+    font-size: 20px;
+  }
+
+  .botao-jogo {
+    display: flex;
+    flex-direction: column;
+    margin: 5em;
+    gap: 2rem;
+    display: flex;
+  }
+
+  button {
+    border: none;
+    padding: 10px;
+    background-color: #FF4500;
+    color: white;
+    font-size: 20px;
+    width: auto;
+    text-align: center;
+  }
+  
+  
+  #cardboard {
+    width: 640px;
+    height: 640px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .memory-card {
+    width: calc(25% - 10px);
+    height: 33%;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: all 400ms ease;
+    position: relative;
+  }
+  
+  .memory-card:active {
+    transform: scale(0.97);
+  }
+  
+  .memory-card.flip {
+    transform: rotateY(180deg);
+  }
+  
+  .front-face,
+  .back-face {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    position: absolute;
+    background: #4169E1;
+    backface-visibility: hidden;
+  }
+  
+  .front-face {
+    transform: rotateY(180deg);
+  }
+
